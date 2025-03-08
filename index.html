@@ -49,7 +49,27 @@
             <p>Explicação com imagens.</p>
         </section>
         <section>
-            <p>[código]</p>
+            <div class="input-group">
+                <label for="message">Message:</label>
+                <textarea name="message" rows="4" placeholder="Enter your Key Word (ex., 'ORANGE')"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button id="encrypt">Encrypt</button>
+                <button id="decrypt">Decrypt</button>
+                <button id="clear">Clear</button>
+            </div>
+
+            <div class="result" id="result">
+                <p>Result will appear here...</p>
+            </div>
+
+            <button id="showTable" class="show-table-btn"> Show Vigenère Table</button>
+
+            <div id="tableContainer" class="vigenere-table hidden">
+                <table id="vigenereTable"></table>
+                <p>How to use the table: Find the row starting whith the key letter, then find the column headed by the plaintext letter. The intersection gives the ciphertext letter.</p>
+            </div>
         </section>
     </div>
     <script src="./cifra.js"></script>

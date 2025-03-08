@@ -5,3 +5,16 @@ document.querySelector(".content").addEventListener("scroll", function() {
     var scrolled = (scrollTop / scrollHeight) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const table = document.getElementById('vigenereTable');
+    let header = document.createElement('tr');
+
+    let cornerCell = document.createElement('td');
+    cornerCell.style.fontWeight = 'bold';
+    header.appendChild(cornerCell);
+
+    
+})
