@@ -73,10 +73,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const filteredKey = key.replace(/[^A-Z]/g, '');
-        
+
         if(filteredKey.length === 0) {
             resultDiv.innerHTML = '<p>Key must contain at least one letter!</p>';
             return;
         }
+
+        let result = '';
+        let steps = [];
+
+        if(action === 'encrypt') {
+            result = vigenereEncrypt(message,filteredKey,steps);
+        } else {
+            result = vigenereDecrypt(message,filteredKey,steps);
+        }
+
+
+        let output = `<h3>${action === 'encrypt' ? 'Encrypted' : 'Decrypted'} Result:</h3>`;
+        output += `<p>Original message:${message}</p>`;
+        output += `<p>Key:${filteredKey}</p>`;
+        output += `<p> Result: ${result}</p>`;
+
+        if(steps.length > 0){
+            output += '<h3>Detailed Steps:</h3><ol>';
+            steps.forEach(step => {
+                output += `<li>${step}</li>`;
+            });
+            output += '</ol>';
+        }
+        resultDiv.innerHTML = output;
 
     }
