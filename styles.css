@@ -50,3 +50,7 @@ section:last-child {
 section:nth-child(odd) {
     background-color: #FFFFFF;
 }
+
+.hidden {
+    display: none;
+  }
