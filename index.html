@@ -9,72 +9,111 @@
 </head>
 
 <body>
-    <div class="header">
-        <h2>CIFRA VIGENÉRE</h2>
-        <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
-        </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
     </div>
 
     <div class="content">
-        <section>
-            <!-- adicionar logo da FATEC, arte da cifra-->
-            <h1>Tarefa de Cifras</h1>
+        <section class="section-cover"> <!-- capa -->
+            <div>
+                <div class="logos-container"><img src="./imagens/fatec-logo.png" alt="Logo da Fatec Rubens Lara"><img src="./imagens/cps-logo.png" alt="Logo do Centro Paula de Souza"><img src="./imagens/spgov-logo.png" alt="Logo do Governo de São Paulo"></div>
+            <h1>Cifra Vigenère</h1>
             <p>Segurança em Sistemas na Internet</p>
-            <p>Grupo:
-                <br>Pamella Sotomayor
-                <br>Fernanda Mell
-                <br>Gabriel Francisco
-                <br>Isabela de Paula
-                <br>João Victor Khalaf
-                <br>Livia Avelino
-                <br>Miriam Daianne
-                <br>Pedro de Oliveira
-                <br>Renan Ewbank</p>
+            </div>
+            <div class="cover-credits">
+                <span>Pamella Sotomayor</span>
+                <span>Fernanda Mell</span>
+                <span>Lívia Avelino</span>
+                <span>Míriam Daianne</span>
+                <span>Isabela de Paula</span>
+                <span>João Victor Khalaf</span>
+                <span>Felipe Santos</span>
+                <span>Renan Ewbank</span>
+                <span>Yan Kairalla</span>
+                <span>Ana Beatriz de Alberti (Crystal)</span>
+                <span>Vitor Castro</span>
+                <span>Lucas de Amigo</span>
+                <span>Gabriel Francisco</span>
+                <span>Pedro de Oliveira</span>
+                <span>Leonardo de Paula</span>
+                <span>Rafael Suckert</span>
+                <span>Eduardo Victor</span>
+                <span>Carlos Eduardo</span>
+                <span>Guilherme de Oliveira</span>
+            </div>
         </section>
-        <section>
-            <h2>O que são cifras?</h2>
-            <p>Explicação sobre criptografia...</p>
+        <section class="section1"> <!-- o que são cifras -->
+            <img src="https://placehold.co/340x550/EEE/31343C">
+            <div class="section1-top">
+                <h2>O que são cifras?</h2>
+                <p>Uma cifra é um método utilizado na criptografia para transformar uma mensagem legível em um formato codificado, garantindo que apenas pessoas autorizadas possam entendê-la.</p>
+            </div>
+            <ul>
+                <li>Cifras de Substituição</li>
+                <li>Cifras de Transposição</li>
+                <li>Cifras Simétricas</li>
+                <li>Cifras Assimétricas</li>
+            </ul>
+            <div class="section1-bottom">
+                <p>As cifras são essenciais para proteger informações e garantir comunicações seguras na internet. Elas são utilizadas em diversas aplicações, como:</p>
+            <ul>
+                <li>Comunicação segura em sites (HTTPS).</li>
+                <li>Proteção de e-mails e mensagens criptografadas.</li>
+                <li>Armazenamento seguro de senhas.</li>
+                <li>Blockchain e assinaturas digitais.</li>
+            </ul>
+            </div>
         </section>
-        <section>
+        <section> <!-- cifras poli -->
             <h2>O que são cifras polialfabéticas?</h2>
             <p>Explicação sobre cifras polialfabéticas...</p>
         </section>
-        <section>
-            <h3>Cifra Vigenère</h3>
+        <section> <!-- sobre a cifra -->
+            <h2>Cifra Vigenère</h2>
             <p>Breve descrição com exemplos.</p>
         </section>
-        <section>
-            <h3>Como ela funciona?</h3>
+        <section> <!-- explicação sobre a cifra -->
+            <h2>Como ela funciona?</h2>
             <p>Explicação com imagens.</p>
         </section>
-        <section>
-            <div class="input-group">
-                <label for="message">Message:</label>
-                <textarea id="message" rows="4" placeholder="Enter your message to encrypt/decrypt"></textarea>
+        <section> <!-- explicação sobre a cifra -->
+            <h2>Porque não podemos usar a Cifra Vigenère hoje em dia?</h2>
+            <p>Explicação...</p>
+        </section>
+        <section id="code-section"> <!-- código -->
+            <div id="input-container">
+                <div class="input-group">
+                    <label for="key">Chave:</label>
+                    <input type="text" id="key">
+                </div>
+                <div class="input-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" rows="8"></textarea>
+                </div>
+                <div class="buttons">
+                    <button id="encrypt">Criptografar</button>
+                    <button id="decrypt">Desciptografar</button>
+                    <button id="clear">Limpar</button>
+                </div>
+            </div>                  
+                            <div id="result-container">
+                <div class="result" id="result"></div>
+                <button id="copyResult" class="copy-btn hidden">Copiar resultado</button>
+                <button id="showTable" class="show-table-btn">Mostrar tabela Vigenère</button>
+                <div id="tableContainer" class="vigenere-table hidden">
+                    <table id="vigenereTable"></table>
+                </div>
             </div>
-
-            <div class="input-group">
-                <label for="key">Key:</label>
-                <input type="text" id="key" placeholder="Enter your Key Word (ex., 'ORANGE')"></textarea>
-            </div>
-
-            <div class="buttons">
-                <button id="encrypt">Encrypt</button>
-                <button id="decrypt">Decrypt</button>
-                <button id="clear">Clear</button>
-            </div>
-
-            <div class="result" id="result">
-                <p>Result will appear here...</p>
-            </div>
-
-            <button id="showTable" class="show-table-btn"> Show Vigenère Table</button>
-
-            <div id="tableContainer" class="vigenere-table hidden">
-                <table id="vigenereTable"></table>
-                <p>How to use the table: Find the row starting whith the key letter, then find the column headed by the plaintext letter. The intersection gives the ciphertext letter.</p>
-            </div>
+        </section>
+        <section class="section8"> <!-- bibliografia -->
+            <h2>Bibliografia</h2>
+            <a href="https://www.techiedelight.com/pt/vigenere-cipher-implementation/
+            ">https://www.techiedelight.com/pt/vigenere-cipher-implementation/
+        </a>
+        <a href="https://www.kaspersky.com.br/blog/vigenere-cipher-history/5688/">https://www.kaspersky.com.br/blog/vigenere-cipher-history/5688/</a>
+        <a href="https://www.dcode.fr/cifrado-vigenere">https://www.dcode.fr/cifrado-vigenere</a>
+        <a href="https://pt.wikipedia.org/wiki/M%C3%A9todo_Kasiski ">https://pt.wikipedia.org/wiki/M%C3%A9todo_Kasiski (somente o primeiro parágrafo)</a>
+        <a href="https://chatgpt.com/">https://chatgpt.com/</a>
         </section>
     </div>
     <script src="./cifra.js"></script>
