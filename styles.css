@@ -53,16 +53,22 @@ section {
 h1 {
     margin-top: 100px;
     font-size: var(--fonte-tamanho-titulo);
-    font-family: var(--fonte-titulo);
-    color: var(--cor-titulo);
-    letter-spacing: 2px;
 }
+
 h2 {
     font-size: var(--fonte-tamanho-titulo2);
+}
+
+h3 {
+    font-size: var(--fonte-tamanho-titulo3);
+}
+
+h1,h2,h3 {
     font-family: var(--fonte-titulo);
     color: var(--cor-titulo);
     letter-spacing: 2px;
 }
+
 p {
     margin-top: 15px;
     font-size: var(--fonte-tamanho-corpo); 
