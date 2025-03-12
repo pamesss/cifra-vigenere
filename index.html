@@ -14,10 +14,11 @@
     </div>
 
     <div class="content">
+        
         <section class="section-cover"> <!-- capa -->
             <div>
                 <div class="logos-container"><img src="./imagens/fatec-logo.png" alt="Logo da Fatec Rubens Lara"><img src="./imagens/cps-logo.png" alt="Logo do Centro Paula de Souza"><img src="./imagens/spgov-logo.png" alt="Logo do Governo de São Paulo"></div>
-            <h1>Cifra Vigenère</h1>
+            <h1 class="cover-title">Cifra Vigenère</h1>
             <p>Segurança em Sistemas na Internet</p>
             </div>
             <div class="cover-credits">
@@ -49,156 +50,138 @@
                 <p>Uma cifra é um método utilizado na criptografia para transformar uma mensagem legível em um formato codificado, garantindo que apenas pessoas autorizadas possam entendê-la.</p>
                 <p>As cifras são essenciais para proteger informações e garantir comunicações seguras na internet. Elas são utilizadas em diversas aplicações, como:</p>
             </div>
-            <ul>
-                <li>Cifras de Substituição</li>
-                <li>Cifras de Transposição</li>
-                <li>Cifras Simétricas</li>
-                <li>Cifras Assimétricas</li>
-            </ul>
+                <ul>
+                    <li><b>Cifras de Substituição</b></li>
+                    <li><b>Cifras de Transposição</b></li>
+                    <li><b>Cifras Simétricas</b></li>
+                    <li><b>Cifras Assimétricas</b></li>
+                </ul>
             <div class="section1-bottom">
-              
-            <ul>
-                <li>Comunicação segura em sites (HTTPS).</li>
-                <li>Proteção de e-mails e mensagens criptografadas.</li>
-                <li>Armazenamento seguro de senhas.</li>
-                <li>Blockchain e assinaturas digitais.</li>
-            </ul>
+                <ul>
+                    <li><b>Comunicação segura em sites (HTTPS).</b></li>
+                    <li><b>Proteção de e-mails e mensagens criptografadas.</b></li>
+                    <li><b>Armazenamento seguro de senhas.</b></li>
+                    <li><b>Blockchain e assinaturas digitais.</b></li>
+                </ul>
             </div>
         </section>
         <section class="section2"> <!-- cifras poli -->
             <h2>O que são cifras polialfabéticas?</h2>
-            <p>Cifra polialfabética é um tipo de cifra que usa vários alfabetos de substituição para codificar uma mensagem, o que a torna mais resistente a ataques de frequência. A Cifra de Vigenère é um dos exemplos mais conhecidos.</p>
-            <h3>Como funciona?</h3>
-            <p>A principal característica é o uso de vários alfabetos, então a mesma letra pode ser criptografada de modos diferentes na mensagem. É usada uma espécie de chave para determinar qual alfabeto será aplicado a cada letra.</p>
-            <p>A cada letra da mensagem original, um alfabeto de substituição diferente é selecionado com base na chave, e a letra é substituída pela letra correspondente nesse alfabeto.</p>
-            <h3>Vantagens</h3>
-            <ul>
-                <li>Dificulta ataques de frequência;</li>
-                <li>É mais segura do que as cifras monoalfabéticas;</li>
-                <li>Dificulta a quebra do código.</li>
-            </ul>
-            <h3>Desvantagens</h3>
-            <ul>
-                <li>Se a chave usada for curta ou se repetir muitas vezes, a cifra pode ser quebrada por seu padrão;</li>
-                <li>Pequenos erros ao cifrar ou decifrar podem causar grandes distorções na mensagem final.</li>
-            </ul>
+            <p class="section2-p">Cifra polialfabética é um tipo de cifra que usa vários alfabetos de substituição para codificar uma mensagem, o que a torna mais resistente a ataques de frequência. A Cifra de Vigenère é um dos exemplos mais conhecidos.</p>
+            <div class="section2-bottom">
+                <div>   
+                    <h3>Como funciona?</h3>
+                    <p>A principal característica é o uso de vários alfabetos, então a mesma letra pode ser criptografada de modos diferentes na mensagem. É usada uma espécie de chave para determinar qual alfabeto será aplicado a cada letra.</p>
+                    <p>A cada letra da mensagem original, um alfabeto de substituição diferente é selecionado com base na chave, e a letra é substituída pela letra correspondente nesse alfabeto.</p>
+                </div>
+                <div>
+                    <h3>Vantagens</h3>
+                    <ul>
+                        <li>Dificulta ataques de frequência;</li>
+                        <li>É mais segura do que as cifras monoalfabéticas;</li>
+                        <li>Dificulta a quebra do código.</li>
+                    </ul>
+                    <h3 class="section2-h3">Desvantagens</h3>
+                    <ul>
+                        <li>Se a chave usada for curta ou se repetir muitas vezes, a cifra pode ser quebrada por seu padrão;</li>
+                        <li>Pequenos erros ao cifrar ou decifrar podem causar grandes distorções na mensagem final.</li>
+                    </ul>
+                </div>
+            </div>            
         </section>
         <section class="section3"> <!-- sobre a cifra -->
-            <h2>Cifra Vigenère</h2>
-            <p>A cifra de Vigenère, datada do século XVII,  é um tipo de substituição polialfabética usada para criptografar um texto com o auxílio de uma palavra-chave. Essa cifra consiste, basicamente, em várias cifras de César aplicadas em sequência, com valores crescentes de deslocamento.</p>
-            <p>Para a criptografia, utiliza-se uma tabela de alfabetos, na qual o alfabeto é escrito 26 vezes em linhas diferentes. Cada linha representa uma versão do alfabeto deslocada ciclicamente uma posição para a esquerda em relação à anterior, correspondendo às 26 possíveis cifras de César. A primeira linha contém o alfabeto em sua sequência normal; a segunda linha corresponde a um deslocamento de +1 (L+1); a terceira, a um deslocamento de +2 (L+2); e assim por diante, até a última linha, que corresponde a um deslocamento de +25 (L+25). O alfabeto usado em cada ponto da criptografia depende de uma palavra-chave repetida ao longo do texto.</p>
-            <p>Dessa forma, constroi-se a seguinte tabela:</p>
-            <img src="imagens/cifra.png" />
-            <p>O texto codificado será formado a partir da interseção das letras do texto original (colunas) com as letras correspondentes da palavra-chave (linhas). A palavra-chave é repetida quantas vezes forem necessárias até o fim do texto.</p>
-
-            <h3>Exemplo:</h3>
-            <ul>
-                <li><strong>Palavra Chave:</strong> CIFRA</li>
-                <li><strong>Frase a ser codificada:</strong> “este é um teste”</li>
-            </ul>
-    
-   
+            <div class="section3-left">
+                <h2>Cifra Vigenère</h2>
+                <p>A cifra de Vigenère é um tipo de <b>substituição polialfabética</b> usada para criptografar um texto com o auxílio de uma palavra-chave.</p>
+                <p>Para a criptografia, utiliza-se uma tabela de alfabetos, na qual o alfabeto é escrito <b>26 vezes em linhas diferentes.</b></p>
+                <p>Cada linha representa uma versão do alfabeto <b>deslocada uma posição para a esquerda</b> em relação à anterior. A primeira linha contém o alfabeto em sua sequência normal.</p>
+                <p>Essa cifra utiliza uma <b>palavra-chave</b>. O texto codificado é gerado pela interseção entre as letras do texto original (colunas) e as letras da palavra-chave (linhas) na tabela de Vigenère.</p>
+            </div>
+            <div>
+                <table id="vigenereTable"></table>
+            </div>
         </section>
-        <section> <!-- explicação sobre a cifra -->
-            <h2>Como ela funciona?</h2>
-            <h3>Passo a Passo:</h3>
-                <p>
-                    Primeiro, repetimos a palavra-chave "CIFRA" ao longo do texto a ser cifrado, para que cada letra tenha uma chave correspondente:
-                    <pre>
-    Texto:       e s t e   é   u m   t e s t e.
-    Chave:       C I F R A C I F R A C I F R A C I
-                    </pre>
+        <section class="section4"> <!-- explicação sobre a cifra -->
+            <div>
+                <h2>Como ela funciona?</h2>
+                <h3>Passo a Passo:</h3>            
+                <p class="section4-margin2">Primeiro, repetimos a palavra-chave "CIFRA" ao longo do texto a ser cifrado, para que cada letra tenha uma chave correspondente:
                 </p>
-                <p>
-                    Agora, determinamos o deslocamento de cada letra da palavra-chave no alfabeto (A=0, B=1, C=2, ..., Z=25):
-                    <pre>
+                <pre >
+                    Texto:       e s t e   é   u m   t e s t e
+                    Chave:       C I F R A C I F R A C I F R A 
+                </pre>
+                <p>Agora, determinamos o deslocamento de cada letra da palavra-chave no alfabeto (A=0, B=1, C=2, ..., Z=25):</p>
+                <pre>
                     C → +2
                     I → +8
                     F → +5
                     R → +17
                     A → +0
-                    </pre>
-                </o>
-                <p>Esse padrão de deslocamento se repete ao longo do texto.</p>
-                <p>Aplicamos os deslocamentos às letras do texto original. Para codificar, somamos o valor de deslocamento de cada letra da palavra-chave à letra do texto correspondente.</p>
-
-                <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Letra da frase a ser codificada</th>
-                                <th>Letra correspondente da palavra-chave</th>
-                                <th>Valor do deslocamento corresponde</th>
-                                <th>Letra resultado da codificação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>E</td>
-                                <td>C</td>
-                                <td>+2</td>
-                                <td>G</td>
-                            </tr>
-                            <tr>
-                                <td>S</td>
-                                <td>I</td>
-                                <td>+8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>T</td>
-                                <td>F</td>
-                                <td>+5</td>
-                                <td>Y</td>
-                            </tr>
-                            <tr>
-                                <td>E</td>
-                                <td>R</td>
-                                <td>+17</td>
-                                <td>V</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-        </section>
-        <section>
-            <p>Exemplo de aplicação na tabela:</p>
-            <img src="imagens/cifra-2.jpg" alt="tabela com cifras marcadas" />
-            <p>E continuamos esse processo para todas as letras da frase.
-                </p>
-                <p>Frase codificada: </p>
-                <pre>
-                    GAYV E WU YVSVN
                 </pre>
-            </section>
-        <section> <!-- explicação sobre a cifra -->
+                <p class="section4-p">Esse padrão de deslocamento se repete ao longo do texto.</p>
+            </div>
+            <div>
+                <p>Aplicamos os deslocamentos às letras do texto original. Para codificar, somamos o valor de deslocamento de cada letra da palavra-chave à letra do texto correspondente.</p>
+                <table class="section4-table">
+                    <thead>
+                        <tr>
+                            <th>Letra da frase a ser codificada</th>
+                            <th>Letra correspondente da palavra-chave</th>
+                            <th>Valor do deslocamento corresponde</th>
+                            <th>Letra resultado da codificação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>E</td>
+                            <td>C</td>
+                            <td>+2</td>
+                            <td>G</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>I</td>
+                            <td>+8</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>F</td>
+                            <td>+5</td>
+                            <td>Y</td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>R</td>
+                            <td>+17</td>
+                            <td>V</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <pre >
+                    Resultado:     g a y v  é  u o  b j j t g
+                </pre>
+            </div>
+        </section>
+        <section class="section5"> <!-- explicação sobre a cifra -->
             <h2>Porque não podemos usar a Cifra Vigenère hoje em dia?</h2>
-            <ol>
-                <li>
-                    <h3>Fraqueza contra ataques de frequência</h3>
-                    <p>
-                        A cifra de Vigenère foi considerada segura por muito tempo, mas técnicas como o Kasiski Examination permitem descobrir o tamanho da chave e quebrar a criptografia facilmente. Como ela é uma cifra polialfabética, mas com um padrão repetitivo, podem identificar padrões no texto cifrado e deduzir a chave.
-                    </p>
-                </li>
-                <li>
-                    <h3>Vulnerabilidade a força bruta</h3>
-                    <p>
-                        Se a chave for curta ou reutilizada, pode ser testada diversas combinações até encontrar a correta. Diferente de criptografias modernas que usam chaves grandes e geradas aleatoriamente, a Vigenère é previsível.
-                    </p>
-                </li>
-                <li>
-                    <h3>Falta de resistência a ataques modernos</h3>
-                    <p>
-                        A Vigenère não tem mecanismos para proteger contra ataques baseados em computação avançada.
-                    </p>
-                </li>
-                <li>
-                    <h3>Uso limitado e desatualizado</h3>
-                    <p>
-                        A cifra de Vigenère é mais usada para fins educacionais ou desafios de criptografia, mas não em aplicações reais. Sistemas modernos exigem criptografia simétrica e assimétrica mais seguras, que garantem integridade e confidencialidade dos dados.
-                    </p>
-                </li>
-            </ol>
+            <div class="section5-container">
+                <div>
+                    <h3>1. Fraqueza contra ataques de frequência</h3>
+                    <p>A cifra de Vigenère foi considerada segura por muito tempo, mas técnicas como o <b>Kasiski Examination</b> permitem descobrir o tamanho da chave e quebrar a criptografia facilmente.</p>
+    
+                    <h3 class="h3-top1">2. Vulnerabilidade a força bruta</h3>
+                    <p>Se a chave for curta ou reutilizada, pode ser testada diversas combinações até encontrar a correta.</p>
+                </div>
+                <div>
+                    <h3>3. Falta de resistência a ataques modernos</h3>
+                    <p>A Vigenère não tem mecanismos para proteger contra ataques baseados em computação avançada.</p>
+                    
+                    <h3 class="h3-top2">4. Uso limitado e desatualizado</h3>
+                    <p>A cifra de Vigenère é mais usada para fins educacionais ou desafios de criptografia, mas não em aplicações reais.</p>
+                </div>
+            </div>
         </section>
         <section id="code-section"> <!-- código -->
             <div id="input-container">
@@ -221,13 +204,9 @@
                     <p>O resultado aparecerá aqui...</p>
                 </div>
                 <button id="copyResult" class="copy-btn hidden">Copiar resultado</button>
-                <button id="showTable" class="show-table-btn">Mostrar tabela Vigenère</button>
-                <div id="tableContainer" class="vigenere-table hidden">
-                    <table id="vigenereTable"></table>
-                </div>
             </div>
         </section>
-        <section class="section8"> <!-- bibliografia -->
+        <section class="section7"> <!-- bibliografia -->
             <h2>Bibliografia</h2>
             <a href="https://www.techiedelight.com/pt/vigenere-cipher-implementation/
             ">https://www.techiedelight.com/pt/vigenere-cipher-implementation/
